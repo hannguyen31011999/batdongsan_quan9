@@ -1,0 +1,39 @@
+@mixin reponsiveBreakPoint($screen) {
+  @if (map-has-key($map: $breakpoints, $key: $screen)) {
+    $value: map-get(
+      $map: $breakpoints,
+      $key: $screen,
+    );
+    @media screen and (max-width: $screen) {
+      @content;
+    }
+  } @else {
+    @error 'srceen is not exist';
+  }
+}
+
+@mixin styleText($fontSize, $color, $marginX, $marginY, $fontWeight) {
+  font-size: $fontSize;
+  color: $color;
+  margin: $marginY $marginX;
+  font-weight: $fontWeight;
+}
+
+@mixin customScroll($width, $background) {
+  /* width */
+  ::-webkit-scrollbar {
+    width: $width;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #fff;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $background;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $background;
+  }
+}
