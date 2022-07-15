@@ -1,9 +1,30 @@
 $breakpoints: (
-  'extra-extra-large': 1400px,
-  'extra-large': 1200px,
-  'large': 992px,
+  'extra-extra-large': 1499px,
+  'extra-large': 1199px,
+  'large': 991px,
   'medium': 768px,
   'small': 576px,
   'mobile': 499px,
   'small-mobile': 375px,
 );
+
+$color-black: #2c2c2c;
+$color-white: #fff;
+$color-sapphire-blue: #004e7f;
+$color-gray: #999;
+$color-gray-1: #f2f2f2;
+$color-red: rgb(255, 131, 122);
+$color-red-1: #df3d32;
+$color-sierra-blue: rgb(237, 247, 255);
+
+$font-weight-1: 400;
+$font-weight-2: 500;
+$font-weight-3: 600;
+$font-weight-4: 700;
+$font-weight-5: 800;
+
+$font-size-small: 12px;
+$font-size-medium: 15px;
+$font-size-large: 18px;
+$font-size-large-1: 24px;
+$font-size-large-2: 32px;
