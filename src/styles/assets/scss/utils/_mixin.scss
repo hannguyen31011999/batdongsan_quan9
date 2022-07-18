@@ -19,6 +19,15 @@
   font-weight: $fontWeight;
 }
 
+@mixin styleButton($border-radius, $border, $color, $fontSize, $fontWeight, $background) {
+  border: $border;
+  border-radius: $border-radius;
+  color: $color;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  background-color: $background;
+}
+
 @mixin customScroll($width, $background) {
   /* width */
   ::-webkit-scrollbar {

@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from 'styles/assets/img/header-logo.svg';
 import PropTypes from 'prop-types';
+import HeaderClientMenu from './HeaderClientMenu';
 
 export default function HeaderDesktop({ handleActionMenu, toggleRef }) {
   return (
@@ -26,18 +27,25 @@ export default function HeaderDesktop({ handleActionMenu, toggleRef }) {
         <ul className="header-left__menu">
           <li className="header-left__item">
             <a href="">Nhà đất bán</a>
+            <div className="header-left__arrow"></div>
+            <HeaderClientMenu />
           </li>
           <li className="header-left__item">
             <a href="">Nhà đất cho thuê</a>
+            <div className="header-left__arrow"></div>
+            <HeaderClientMenu />
           </li>
           <li className="header-left__item">
             <a href="">Dự án</a>
+            <div className="header-left__arrow"></div>
           </li>
           <li className="header-left__item">
             <a href="">Tin tức</a>
+            <div className="header-left__arrow"></div>
           </li>
           <li className="header-left__item active-tags">
             <a href="">Wiki BĐS</a>
+            <div className="header-left__arrow"></div>
             <div className="header-left__tags">
               <span>Mới</span>
             </div>

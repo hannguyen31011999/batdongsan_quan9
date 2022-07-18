@@ -1,7 +1,6 @@
-import React, { Fragment, useState, useRef, useEffect } from 'react';
-import HeaderMobile from './HeaderMobile';
+import { Fragment, useEffect, useRef, useState } from 'react';
 import HeaderDesktop from './HeaderDesktop';
-import { useClickOutSide } from 'hooks/useClickOutSide';
+import HeaderMobile from './HeaderMobile';
 
 export default function HeaderClient() {
   const menuRef = useRef();
@@ -14,6 +13,14 @@ export default function HeaderClient() {
     });
     return () => {
       window.removeEventListener('click', (e) => {});
+    };
+  }, []);
+  useEffect(() => {
+    window.addEventListener('resize', (e) => {
+      if (e.target.screen.width > 1199) setShowMenuMobile(false);
+    });
+    return () => {
+      window.removeEventListener('resize', (e) => {});
     };
   }, []);
   return (
