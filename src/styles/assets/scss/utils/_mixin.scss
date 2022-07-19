@@ -28,6 +28,18 @@
   background-color: $background;
 }
 
+@mixin customButtonCarousel($direction, $space) {
+  position: absolute;
+  top: 50%;
+  z-index: 9;
+  transform: translateY(-100%);
+  @if ($direction == 'left') {
+    left: $space;
+  } @else {
+    right: $space;
+  }
+}
+
 @mixin customScroll($width, $background) {
   /* width */
   ::-webkit-scrollbar {

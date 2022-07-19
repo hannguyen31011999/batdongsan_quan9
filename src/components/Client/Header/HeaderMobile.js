@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import PropTypes from 'prop-types';
 import LogoHome from 'styles/assets/img/icon/ic_for_sale.svg';
+import HeaderMobileMenu from './HeaderMobileMenu';
 
 export default function HeaderMobile({ isShowMenu, menuRef }) {
   const [isShowSubMenu, setShowSubMenu] = useState(false);
@@ -45,20 +46,7 @@ export default function HeaderMobile({ isShowMenu, menuRef }) {
                     ></i>
                   </div>
                 </div>
-                <ul className="header-mobile__childMenu">
-                  <li>
-                    <a href="">Bán căn hộ chung cư</a>
-                  </li>
-                  <li>
-                    <a href="">Bán nhà riêng</a>
-                  </li>
-                  <li>
-                    <a href="">Bán nhà riêng</a>
-                  </li>
-                  <li>
-                    <a href="">Bán nhà riêng</a>
-                  </li>
-                </ul>
+                <HeaderMobileMenu />
               </li>
             </ul>
           </div>

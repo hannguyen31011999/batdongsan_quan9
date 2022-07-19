@@ -1,0 +1,28 @@
+.search {
+  width: 50%;
+  margin: 0 auto;
+  &-tab {
+    display: flex;
+    &__item {
+      border-radius: 8px 8px 0 0;
+      list-style-type: none;
+      padding: 10px 20px;
+      background-color: $color-gray-1;
+      @include styleText($font-size-medium - 1, $color-black, 0, 0, $font-weight-1);
+      margin-right: 10px;
+      cursor: pointer;
+      &:first-of-type {
+        background-color: $color-back-1;
+        color: $color-white;
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+  &-content {
+    padding: 20px 0;
+    background-color: $color-back-1;
+    border-radius: 0 0 8px 8px;
+  }
+}
