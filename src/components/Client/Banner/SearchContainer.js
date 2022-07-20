@@ -1,4 +1,5 @@
 import React from 'react';
+import SelectComponent from 'components/Select/SelectComponent';
 
 export default function SearchContainer() {
   return (
@@ -9,9 +10,9 @@ export default function SearchContainer() {
       </ul>
       <div className="search-content">
         <div className="search-categories">
-          <div className="search-group"></div>
+          <SelectComponent />
         </div>
-        <div className="search-filter"></div>
+        <div className="search-multi"></div>
       </div>
     </div>
   );
