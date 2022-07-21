@@ -1,2 +1,65 @@
 .select {
+  &-container {
+    cursor: pointer;
+    position: relative;
+  }
+  &-text {
+    @include styleText($font-size-medium - 1, $color-back-1, 0, 0, $font-weight-2);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .fa-angle-down {
+      padding-right: 10px;
+    }
+  }
+  &-list {
+    border-radius: 8px;
+    padding: 10px 0;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    background-color: $color-white;
+    z-index: 9;
+    width: 247px;
+  }
+  &-option {
+    list-style-type: none;
+    padding: 3px 0;
+    border-bottom: 1px solid rgba($color-gray, 0.2);
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 7px 10px;
+    }
+    &__text {
+      @include styleText($font-size-small + 2, $color-back-1, 0, 0, $font-weight-1);
+    }
+    &__icon {
+      position: relative;
+      border: 1px solid $color-gray;
+      height: 14px;
+      width: 14px;
+      border-radius: 4px;
+    }
+    .active {
+      border: none;
+      background-color: $color-red-1;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 5px;
+        top: 2px;
+        width: 2px;
+        height: 5px;
+        border: solid $color-white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+    &:hover &__content {
+      background-color: rgba($color-gray, 0.1);
+    }
+  }
 }

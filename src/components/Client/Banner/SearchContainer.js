@@ -1,5 +1,6 @@
 import React from 'react';
 import SelectComponent from 'components/Select/SelectComponent';
+import InputComponent from 'components/Input/InputComponent';
 
 export default function SearchContainer() {
   return (
@@ -10,7 +11,11 @@ export default function SearchContainer() {
       </ul>
       <div className="search-content">
         <div className="search-categories">
-          <SelectComponent />
+          <SelectComponent classComponent="search-select" />
+          <InputComponent />
+          <button type="submit" className="search-btnSubmit">
+            <i className="fa fa-search" /> Tìm kiếm
+          </button>
         </div>
         <div className="search-multi"></div>
       </div>
