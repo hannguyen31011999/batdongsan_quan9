@@ -1,14 +1,14 @@
 export const listCarousel = [
   {
     id: 1,
-    src: 'https://s0.2mdn.net/dfp/2092642/5090696810/1658194254846/index.html',
+    src: 'https://canhoakaricity.vn/wp-content/uploads/2022/03/DJI_0698-1920x959.jpg',
   },
   {
     id: 2,
-    src: 'https://s0.2mdn.net/dfp/2092642/5090696810/1657859408581/index.html',
+    src: 'https://dongtayland.vn/wp-content/uploads/2022/06/Lumiere-Boulevard-Vinhomes-Grand-Park-1.jpg',
   },
   {
     id: 3,
-    src: 'https://s0.2mdn.net/dfp/2092642/5090696810/1657510624508/220705-XungHT-1920x560/index.html',
+    src: 'https://aqua-city.land/wp-content/uploads/2022/07/aqua-city.jpg',
   },
 ];

@@ -71,4 +71,7 @@
       @include customButtonCarousel('left', 15px);
     }
   }
+  @include reponsiveBreakPoint('mobile') {
+    display: none;
+  }
 }

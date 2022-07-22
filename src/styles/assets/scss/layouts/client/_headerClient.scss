@@ -132,6 +132,16 @@
         }
       }
     }
+    @include reponsiveBreakPoint('medium') {
+      & {
+        &__logo {
+          width: 67%;
+        }
+        &__menu {
+          width: 33%;
+        }
+      }
+    }
   }
   &-logo {
     @include reponsiveBreakPoint('extra-large') {

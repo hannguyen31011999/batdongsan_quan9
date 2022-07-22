@@ -2,9 +2,9 @@
   width: 50%;
   margin: 0 auto;
   position: absolute;
-  top: 12%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   &-tab {
     display: flex;
     &__item {
@@ -66,5 +66,14 @@
     &:hover {
       opacity: 0.7;
     }
+  }
+  @include reponsiveBreakPoint('extra-large') {
+    width: 75%;
+  }
+  @include reponsiveBreakPoint('medium') {
+    width: 90%;
+  }
+  @include reponsiveBreakPoint('mobile') {
+    display: none;
   }
 }

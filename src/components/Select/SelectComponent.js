@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import OptionComponent from './OptionComponent';
 import { listCategoriesMenu } from 'settings/constants/ListCategories';
 
 export default function SelectComponent({ classComponent }) {
   const [activeMenu, setActiveMenu] = useState([]);
+  const [isShowSelect, setShowSelect] = useState(false);
+  const optionRef = useRef();
+  const selectRef = useRef();
   const handleSelectOption = (item) => {
     let temp = [...activeMenu];
     const index = temp?.findIndex((val) => val.id === item.id && val.isActive);
@@ -16,13 +19,24 @@ export default function SelectComponent({ classComponent }) {
       setActiveMenu(temp);
     }
   };
+  useEffect(() => {
+    window.addEventListener('click', (e) => {
+      if (!optionRef?.current.contains(e.target) && !selectRef?.current.contains(e.target)) {
+        setShowSelect(false);
+      }
+    });
+  }, []);
   return (
     <div className={`select-container ${classComponent ? classComponent : ''}`}>
-      <div className="select-text">
+      <div className="select-text" onClick={() => setShowSelect(!isShowSelect)} ref={selectRef}>
         <span>Loại nhà đất</span>
         <i className="fa fa-angle-down" />
       </div>
-      <div className="select-list">
+      <div
+        className="select-list"
+        style={isShowSelect ? { display: 'block' } : { display: 'none' }}
+        ref={optionRef}
+      >
         <ul className="select-list-option">
           {listCategoriesMenu.map((item) => {
             return (
